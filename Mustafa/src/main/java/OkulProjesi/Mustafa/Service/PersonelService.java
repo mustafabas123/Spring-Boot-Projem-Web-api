@@ -1,13 +1,19 @@
 package OkulProjesi.Mustafa.Service;
 
+import OkulProjesi.Mustafa.Dto.PersonelDto;
 import OkulProjesi.Mustafa.Entity.Personel;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
 public interface PersonelService {
-    Personel createPersonel(Personel personel);
-    List<Personel> getUser();
+    PersonelDto createPersonel(PersonelDto personel);
+    List<PersonelDto> getUsers();
 
     Boolean deletePersonel(Integer id);
-    Personel updatePersonel(Integer id,Personel personel);
+    PersonelDto updatePersonel(Integer id,PersonelDto personel);
+    PersonelDto getUser(Integer id);
+    Page<Personel> pagination(int currentPage,int pageSize);
+    Page<Personel> pagination(Pageable pageable);
 }

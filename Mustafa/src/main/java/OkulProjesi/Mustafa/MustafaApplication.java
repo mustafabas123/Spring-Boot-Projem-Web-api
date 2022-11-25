@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class MustafaApplication implements CommandLineRunner {
+public class  MustafaApplication implements CommandLineRunner {
 	private final PersonelRepository personelRepository;
 	private final StudentRepository studentRepository;
 	private final TeacherRepository teacherRepository;
